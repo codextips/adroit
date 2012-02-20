@@ -8,7 +8,7 @@ class m120220_070358_create_categories_table extends CDbMigration
 			'category_id'=> 'int(11) NOT NULL AUTO_INCREMENT',
 			'title'=> 'varchar(50) DEFAULT NULL',
 			'PRIMARY KEY (category_id)',
-		));
+		),'ENGINE=InnoDB DEFAULT CHARSET=utf8');
 	}
 
 	public function down()
