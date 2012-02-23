@@ -2,7 +2,7 @@
 
 class m120221_140925_insert_default_data_in_comments_table extends CDbMigration
 {
-	public function up()
+	public function safeUp()
 	{
 		$this->insert('{{comments}}', array(
 			'comment_id'=> 1,
@@ -44,7 +44,7 @@ class m120221_140925_insert_default_data_in_comments_table extends CDbMigration
 		));
 	}
 
-	public function down()
+	public function safeDown()
 	{
 		$this->delete('{{comments}}', 'comment_id IN(1,2,4,5)');
 	}

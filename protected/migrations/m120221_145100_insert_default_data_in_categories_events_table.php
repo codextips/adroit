@@ -2,7 +2,7 @@
 
 class m120221_145100_insert_default_data_in_categories_events_table extends CDbMigration
 {
-	public function up()
+	public function safeUp()
 	{
 		$this->insert('categories_events', array(
 			'category_id'=>2,
@@ -35,7 +35,7 @@ class m120221_145100_insert_default_data_in_categories_events_table extends CDbM
 		));
 	}
 
-	public function down()
+	public function safeDown()
 	{
 		$this->delete('{{categories_events}}', 'category_id = 2 AND event_id = 2');
 		$this->delete('{{categories_events}}', 'category_id = 2 AND event_id = 1');
@@ -44,15 +44,4 @@ class m120221_145100_insert_default_data_in_categories_events_table extends CDbM
 		$this->delete('{{categories_events}}', 'category_id = 1 AND event_id = 1');
 		$this->delete('{{categories_events}}', 'category_id = 2 AND event_id = 3');
 	}
-
-	/*
-	// Use safeUp/safeDown to do migration with transaction
-	public function safeUp()
-	{
-	}
-
-	public function safeDown()
-	{
-	}
-	*/
 }

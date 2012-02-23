@@ -2,7 +2,7 @@
 
 class m120221_140341_insert_default_data_in_categories_table extends CDbMigration
 {
-	public function up()
+	public function safeUp()
 	{
 		$this->insert('{{categories}}', array(
 			'category_id'=> 1,
@@ -18,7 +18,7 @@ class m120221_140341_insert_default_data_in_categories_table extends CDbMigratio
 		));
 	}
 
-	public function down()
+	public function safeDown()
 	{
 		$this->delete('{{categories}}', 'category_id<4');
 	}

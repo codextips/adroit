@@ -2,7 +2,7 @@
 
 class m120221_144139_insert_default_data_in_talks_table extends CDbMigration
 {
-	public function up()
+	public function safeUp()
 	{
 		$this->insert('{{talks}}', array(
 			'talk_id'=> 1,
@@ -14,7 +14,7 @@ class m120221_144139_insert_default_data_in_talks_table extends CDbMigration
 		));
 	}
 
-	public function down()
+	public function safeDown()
 	{
 		$this->delete('{{talks}}', 'talk_id=1');
 	}
