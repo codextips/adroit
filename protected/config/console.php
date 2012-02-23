@@ -17,6 +17,7 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=adroit',
 			'emulatePrepare' => true,
+			'tablePrefix' => '',
 			'username' => 'adroit',
 			'password' => 'adroit',
 			'charset' => 'utf8',
