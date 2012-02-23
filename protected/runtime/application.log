@@ -1,0 +1,189 @@
+2012/02/23 22:25:20 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/imam/public_html/adroit/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/imam/public_html/adroit/framework/web/CAssetManager.php:116
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CAssetManager.php(101): CAssetManager->setBasePath('/home/imam/publ...')
+#1 /home/imam/public_html/adroit/framework/web/CAssetManager.php(219): CAssetManager->getBasePath()
+#2 /home/imam/public_html/adroit/protected/extensions/bootstrap/components/Bootstrap.php(346): CAssetManager->publish('/home/imam/publ...', false, -1, true)
+#3 /home/imam/public_html/adroit/protected/extensions/bootstrap/components/Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 /home/imam/public_html/adroit/protected/extensions/bootstrap/components/Bootstrap.php(57): Bootstrap->registerCss()
+#5 /home/imam/public_html/adroit/framework/base/CModule.php(388): Bootstrap->init()
+#6 /home/imam/public_html/adroit/framework/base/CModule.php(493): CModule->getComponent('bootstrap')
+#7 /home/imam/public_html/adroit/framework/base/CApplication.php(146): CModule->preloadComponents()
+#8 /home/imam/public_html/adroit/framework/YiiBase.php(127): CApplication->__construct('/home/imam/publ...')
+#9 /home/imam/public_html/adroit/framework/YiiBase.php(100): YiiBase::createApplication('CWebApplication', '/home/imam/publ...')
+#10 /home/imam/public_html/adroit/index.php(13): YiiBase::createWebApplication('/home/imam/publ...')
+#11 {main}
+REQUEST_URI=/adroit/
+---
+2012/02/23 22:47:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('about')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('about')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/about
+---
+2012/02/23 23:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "event/upcoming".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('event/upcoming')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/event/upcoming
+HTTP_REFERER=http://localhost/adroit/
+---
+2012/02/23 23:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('about')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('about')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/about
+HTTP_REFERER=http://localhost/adroit/site/contact
+---
+2012/02/23 23:14:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "event/upcoming".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('event/upcoming')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/event/upcoming
+HTTP_REFERER=http://localhost/adroit/
+---
+2012/02/23 23:55:12 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.isGuest" is not defined.' in /home/imam/public_html/adroit/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/base/CModule.php(106): CComponent->__get('isGuest')
+#1 /home/imam/public_html/adroit/protected/views/layouts/main.php(39): CModule->__get('isGuest')
+#2 /home/imam/public_html/adroit/framework/web/CBaseController.php(127): require('/home/imam/publ...')
+#3 /home/imam/public_html/adroit/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/imam/publ...', Array, true)
+#4 /home/imam/public_html/adroit/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/home/imam/publ...', Array, true)
+#5 /home/imam/public_html/adroit/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 /home/imam/public_html/adroit/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 /home/imam/public_html/adroit/framework/web/CBaseController.php(207): COutputProcessor->run()
+#8 /home/imam/public_html/adroit/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 /home/imam/public_html/adroit/protected/views/layouts/column1.php(15): CBaseController->endContent()
+#10 /home/imam/public_html/adroit/framework/web/CBaseController.php(127): require('/home/imam/publ...')
+#11 /home/imam/public_html/adroit/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/imam/publ...', Array, true)
+#12 /home/imam/public_html/adroit/framework/web/CController.php(785): CBaseController->renderFile('/home/imam/publ...', Array, true)
+#13 /home/imam/public_html/adroit/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /home/imam/public_html/adroit/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#15 /home/imam/public_html/adroit/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /home/imam/public_html/adroit/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#17 /home/imam/public_html/adroit/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#20 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/adroit/
+---
+2012/02/23 23:55:26 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "isGuest".' in /home/imam/public_html/adroit/framework/base/CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('isGuest', Array)
+#1 /home/imam/public_html/adroit/protected/views/layouts/main.php(39): CWebApplication->isGuest()
+#2 /home/imam/public_html/adroit/framework/web/CBaseController.php(127): require('/home/imam/publ...')
+#3 /home/imam/public_html/adroit/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/imam/publ...', Array, true)
+#4 /home/imam/public_html/adroit/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/home/imam/publ...', Array, true)
+#5 /home/imam/public_html/adroit/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 /home/imam/public_html/adroit/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 /home/imam/public_html/adroit/framework/web/CBaseController.php(207): COutputProcessor->run()
+#8 /home/imam/public_html/adroit/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 /home/imam/public_html/adroit/protected/views/layouts/column1.php(15): CBaseController->endContent()
+#10 /home/imam/public_html/adroit/framework/web/CBaseController.php(127): require('/home/imam/publ...')
+#11 /home/imam/public_html/adroit/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/imam/publ...', Array, true)
+#12 /home/imam/public_html/adroit/framework/web/CController.php(785): CBaseController->renderFile('/home/imam/publ...', Array, true)
+#13 /home/imam/public_html/adroit/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /home/imam/public_html/adroit/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#15 /home/imam/public_html/adroit/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /home/imam/public_html/adroit/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#17 /home/imam/public_html/adroit/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#20 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/adroit/
+---
+2012/02/24 00:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loging".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('loging')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('loging')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/loging')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/loging
+---
+2012/02/24 00:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/update".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('user/update')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/user/update
+HTTP_REFERER=http://localhost/adroit/index.php
+---
+2012/02/24 00:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/site/logout".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('user/site/logou...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/user/site/logout
+HTTP_REFERER=http://localhost/adroit/user/update
+---
+2012/02/24 00:44:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/site/logout".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('user/site/logou...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/user/site/logout
+---
+2012/02/24 01:34:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/goo...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 01:34:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/yah...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 01:34:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/goo...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 01:34:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/yah...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---

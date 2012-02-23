@@ -6,3 +6,8 @@ body {
 .grid-view input, select{
 	width: 100%;
 }
+
+.login-text a
+{
+	padding-top: 10px;
+}

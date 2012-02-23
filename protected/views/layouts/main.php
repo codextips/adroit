@@ -16,32 +16,44 @@
 <body>
 	<?php $this->widget('bootstrap.widgets.BootNavbar', array(
 		'fixed'=>true,
-		'brand'=>'Pathshala',
+		'brand'=>  Yii::app()->name,
 		'brandUrl'=>  Yii::app()->baseUrl,
 		'collapse'=>true, // requires bootstrap-responsive.css
 		'items'=>array(
 			array(
 				'class'=>'bootstrap.widgets.BootMenu',
 				'items'=>array(
-					array('label'=>'Home', 'url'=>'#', 'active'=>true),
-					array('label'=>'Link', 'url'=>'#'),
-					array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-						array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
-						array('label'=>'Action', 'url'=>'#'),
-						array('label'=>'Another action', 'url'=>'#'),
-						array('label'=>'Something else here', 'url'=>'#'),
-						'---',
-						array('label'=>'Separated link', 'url'=>'#'),
+					array('label'=>'Home', 'url'=> Yii::app()->baseUrl, 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'index')? true : false),
+					array('label'=>'Events', 'url'=>'#', 'active'=> ($this->uniqueid == 'event')? true : false, 'items'=>array(
+						array('label'=>'Browse Events', 'itemOptions'=>array('class'=>'nav-header')),
+						array('label'=>'All Events', 'url'=>  Yii::app()->createUrl('event/all')),
+						array('label'=>'Upcoming Events', 'url'=>Yii::app()->createUrl('event/upcoming')),
+						array('label'=>'Current Events', 'url'=>Yii::app()->createUrl('event/current')),
+						array('label'=>'Popular Events', 'url'=>Yii::app()->createUrl('event/popular')),
 					)),
+					array('label'=>'Contact', 'url'=>Yii::app()->createUrl('site/contact'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'contact')? true : false),
+					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/about'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'about')? true : false),
 				),
 			),
-			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span3" placeholder="Search"></form>',
+//			(!Yii::app()->user->isGuest)? 
+//				'<span><a href="user/update">' . ((isset(Yii::app()->user->name)) ? Yii::app()->user->name : Yii::app()->user->email).'</a></span> | <a href="site/logout">Logout</a>' :
+//                'not log in',
 			array(
 				'class'=>'bootstrap.widgets.BootMenu',
 				'htmlOptions'=>array('class'=>'pull-right'),
 				'items'=>array(
-					array('label'=>'Link', 'url'=>'#'),
-					array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+					array('label'=> (!Yii::app()->user->isGuest)? ((isset(Yii::app()->user->name))) ? 'Welcome '. Yii::app()->user->name : 'Welcome '.Yii::app()->user->email : '',
+						'url'=> Yii::app()->createUrl('user/update'), 'visible' => !Yii::app()->user->isGuest),
+					array('label'=> 'Logout',
+						'url'=> Yii::app()->createUrl('site/logout'), 'visible' => !Yii::app()->user->isGuest),
+					array('label'=> 'Login With:',
+						'url'=> Yii::app()->createUrl('site/login'), 'visible' => Yii::app()->user->isGuest),
+					array('label'=> CHtml::image('images/google_signin.png'), 'linkOptions' => array('style' => 'padding: 8px 1px 8px;'),
+						'url'=> Yii::app()->createUrl('site/login'), 'visible' => Yii::app()->user->isGuest, 'encodeLabel' => false),
+					array('label'=> CHtml::image('images/yahoo_signin.png'), 'linkOptions' => array('style' => 'padding: 8px 2px 8px;'),
+						'url'=> Yii::app()->createUrl('site/login'), 'visible' => Yii::app()->user->isGuest, 'encodeLabel' => false),
+					array('label'=>'API', 'url'=>'#', 'items'=>array(
 						array('label'=>'Action', 'url'=>'#'),
 						array('label'=>'Another action', 'url'=>'#'),
 						array('label'=>'Something else here', 'url'=>'#'),
