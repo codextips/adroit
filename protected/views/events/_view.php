@@ -49,7 +49,7 @@
                     
                 }else{
                     echo "<strong>$data->total_attending people</strong> attending so far! &nbsp;";
-                    echo CHtml::link("Login to attend!", 'site/login', array('class' => 'btn small btn-primary'));
+                    echo CHtml::link("Login to attend!", array('site/login'), array('class' => 'btn small btn-primary'));
                 }
                 ?>
             </span>
