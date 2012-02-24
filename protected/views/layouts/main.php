@@ -32,10 +32,10 @@
 						array('label'=>'Popular Events', 'url'=>Yii::app()->createUrl('events/popular')),
 					)),
 					array('label'=>'Contact', 'url'=>Yii::app()->createUrl('site/contact'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'contact')? true : false),
-					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/page',array('view'=>'about')), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'about')? true : false),
+					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/page',array('view'=>'about')), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'page')? true : false),
 				),
 			),
-			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span3" placeholder="Search"></form>',
+			'<form method = "post" class="navbar-search pull-left" action="'.Yii::app()->createUrl("events/search").'"><input name="Events[summary]", type="text" class="search-query span3" placeholder="Search"></form>',
 //			(!Yii::app()->user->isGuest)? 
 //				'<span><a href="user/update">' . ((isset(Yii::app()->user->name)) ? Yii::app()->user->name : Yii::app()->user->email).'</a></span> | <a href="site/logout">Logout</a>' :
 //                'not log in',

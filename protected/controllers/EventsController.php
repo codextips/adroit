@@ -27,7 +27,7 @@ class EventsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -149,6 +149,17 @@ class EventsController extends Controller
 			$model->attributes=$_GET['Events'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+	
+	public function actionSearch()
+	{
+		$model=new Events('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_REQUEST['Events']))
+			$model->attributes=$_REQUEST['Events'];
+		$this->render('search',array(
 			'model'=>$model,
 		));
 	}
