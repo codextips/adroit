@@ -16,6 +16,7 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	'htmlOptions'=>array('class'=>'well'),
 )); ?>
 
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
@@ -26,8 +27,8 @@ $this->breadcrumbs=array(
 
 	<?php echo $form->textFieldRow($model,'password',array('class'=>'span5')); ?>	
 
-	<div class="actions">
-		<?php echo CHtml::submitButton('Login',array('class'=>'btn primary')); ?>
+	<div class="actions offset6">
+		<?php echo CHtml::submitButton('Login',array('class'=>'btn-large btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
