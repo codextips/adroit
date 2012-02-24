@@ -44,3 +44,7 @@ div.meta {
 .align-justify {
     text-align: justify;
 }
+
+.thumbnails-mini {
+	margin: 0 0 8px 8px !important;
+}

@@ -45,6 +45,11 @@
 		$this->widget('application.widgets.event.EventSubmit');
 		?>
 		</div>
+		<?php if(isset ($this->clips['whoIsAttending'])){ ?>
+			<div class="well">
+			<?php echo $this->clips['whoIsAttending']; ?>
+			</div>
+		<?php } ?>
 	</div><!-- sidebar -->
 </div>
 <?php $this->endContent(); ?>

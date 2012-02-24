@@ -90,4 +90,14 @@ class Users extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function getGravatar($size = 32, $withImgTag = false, $class='thumbnail')
+	{
+        $email_hash = md5( strtolower( trim( $this->email) ) );
+		if($withImgTag)
+		{
+			return "<img class='$class' src='http://www.gravatar.com/avatar/$email_hash?s=$size' />";
+		}
+        return "http://www.gravatar.com/avatar/$email_hash?s=$size";
+    }
 }

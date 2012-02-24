@@ -54,8 +54,18 @@ class EventsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
+		
+		$this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'whoIsAttending'));
+		
+			$this->widget('application.widgets.event.WhoIsAttending', array(
+				'eventID'=> $id,
+			));    
+			
+		$this->endWidget();
+		
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
 	}
 
