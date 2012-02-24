@@ -32,6 +32,10 @@ class TalksController extends Controller {
                 'actions' => array('create', 'update'),
                 'users' => array('@'),
             ),
+            array('allow', // allow authenticated user to perform 'rate'
+                'actions' => array('rate'),
+                'users' => array('@'),
+            ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('admin', 'delete'),
                 'users' => array('admin'),
@@ -47,8 +51,32 @@ class TalksController extends Controller {
      * @param integer $id the ID of the model to be displayed
      */
     public function actionView($id) {
+        $model = Talks::model()->with('event')->findByPk($id);
+        if ($model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+            return;
+        }
+
+        $comment = new Comments;
+        $comment->attributes = array(
+            'talk_id' => $model->talk_id,
+            'user_id' => Yii::app()->user->id,
+        );
+
+        $commentsDataProvider = new CActiveDataProvider('Comments', array(
+                    'criteria' => array(
+                        'condition' => "talk_id = $model->talk_id",
+                        'with' => array('commentor'),
+                        'order' => 't.create_date DESC'
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 5,
+                    ),
+                ));
         $this->render('view', array(
-            'model' => $this->loadModel($id),
+            'model' => $model,
+            'comment' => $comment,
+            'commentsDataProvider' => $commentsDataProvider
         ));
     }
 
@@ -157,6 +185,17 @@ class TalksController extends Controller {
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'talks-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
+        }
+    }
+
+    public function actionRate($id) {
+        $this->layout = null;
+        $model = $this->loadModel($id);
+        if (isset($_POST['rating'])) {
+            if ($model->rate($_POST['rating'])) {
+                echo (double) $model->rating;
+                return;
+            }
         }
     }
 

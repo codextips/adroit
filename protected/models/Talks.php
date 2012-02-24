@@ -16,6 +16,7 @@
  */
 class Talks extends CActiveRecord
 {
+    public $rating_stars_on;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -46,7 +47,7 @@ class Talks extends CActiveRecord
 			array('rating', 'numerical'),
 			array('title, slide_link', 'length', 'max'=>200),
 			array('speaker', 'length', 'max'=>50),
-			array('summary', 'safe'),
+			array('summary, rating_stars_on', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('talk_id, event_id, title, summary, speaker, slide_link, total_comments, rating, rate_count', 'safe', 'on'=>'search'),
@@ -61,6 +62,7 @@ class Talks extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'event' => array(self::BELONGS_TO, 'Events', 'event_id'),
 		);
 	}
 
@@ -107,4 +109,13 @@ class Talks extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function rate($rating){
+        $new_rate_count = (int)$this->rate_count + 1;
+        $new_rating = ((double)($this->rating * $this->rate_count) + (double)$rating) / $new_rate_count;
+        $new_rating = round($new_rating, 1);
+        $this->rating = $new_rating;
+        $this->rate_count = $new_rate_count;
+        return $this->save();
+    }
 }
