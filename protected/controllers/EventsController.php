@@ -125,11 +125,11 @@ class EventsController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex($show='all')
+	public function actionIndex($type='all', $category='')
 	{
-		if($show == 'upcoming') $dataSource = Events::model()->upcoming()->active();
-		else if($show == 'ongoing') $dataSource = Events::model()->ongoing()->active();
-		else if($show == 'popular') $dataSource = Events::model()->popular()->active();
+		if($type == 'upcoming') $dataSource = Events::model()->upcoming()->active();
+		else if($type == 'ongoing') $dataSource = Events::model()->ongoing()->active();
+		else if($type == 'popular') $dataSource = Events::model()->popular()->active();
 		else $dataSource = 'Events';
 		
 		$dataProvider=new CActiveDataProvider($dataSource);

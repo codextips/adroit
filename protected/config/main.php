@@ -49,8 +49,11 @@ return array(
 			'showScriptName'=> false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:events>/<action:admin>'=>'<controller>/<action>',
-				'<controller:events>/<show:\w+>'=>'<controller>/index',
+				'events/admin'=>'events/admin',
+				'events/view/<id:\d+>'=>'events/view',
+				'events/update/<id:\d+>'=>'events/update',
+				'events/<type>'=>'events/index',
+				'events/<type>/category/<category>'=>'events/index',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),

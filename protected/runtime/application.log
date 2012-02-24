@@ -428,3 +428,895 @@ Stack trace:
 REQUEST_URI=/adroit/events/images/yahoo_signin.png
 HTTP_REFERER=http://localhost/adroit/events/
 ---
+2012/02/24 12:44:34 [error] [exception.CException] exception 'CException' with message 'Property "CategoryWidget.contents" is not defined.' in /home/imam/public_html/adroit/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/imam/public_html/adroit/protected/widgets/category/CategoryWidget.php(18): CComponent->__get('contents')
+#1 /home/imam/public_html/adroit/framework/web/CBaseController.php(174): CategoryWidget->run()
+#2 /home/imam/public_html/adroit/protected/views/layouts/column2.php(13): CBaseController->widget('application.wid...', Array)
+#3 /home/imam/public_html/adroit/framework/web/CBaseController.php(127): require('/home/imam/publ...')
+#4 /home/imam/public_html/adroit/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/imam/publ...', Array, true)
+#5 /home/imam/public_html/adroit/framework/web/CController.php(785): CBaseController->renderFile('/home/imam/publ...', Array, true)
+#6 /home/imam/public_html/adroit/protected/controllers/SiteController.php(36): CController->render('index', Array)
+#7 /home/imam/public_html/adroit/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#8 /home/imam/public_html/adroit/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /home/imam/public_html/adroit/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /home/imam/public_html/adroit/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('')
+#12 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#13 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/adroit/
+---
+2012/02/24 12:48:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:48:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:52:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:52:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/1
+---
+2012/02/24 12:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/index
+---
+2012/02/24 12:56:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/goo...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 12:56:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/yah...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 12:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categories/view".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('categories/view')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/categories/2
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 12:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categories/images/google_signin.png".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('categories/imag...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/categories/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/categories/2
+---
+2012/02/24 12:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categories/images/yahoo_signin.png".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('categories/imag...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/categories/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/categories/2
+---
+2012/02/24 12:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categories/images/google_signin.png".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('categories/imag...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/categories/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/categories/2
+---
+2012/02/24 12:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categories/images/yahoo_signin.png".' in /home/imam/public_html/adroit/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('categories/imag...')
+#1 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adroit/categories/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/categories/2
+---
+2012/02/24 13:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/.NET
+HTTP_REFERER=http://localhost/adroit/
+---
+2012/02/24 13:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/.NET
+---
+2012/02/24 13:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/.NET
+---
+2012/02/24 13:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/.NET
+---
+2012/02/24 13:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/.NET
+---
+2012/02/24 13:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/PHP
+HTTP_REFERER=http://localhost/adroit/events/all/
+---
+2012/02/24 13:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/Ruby
+HTTP_REFERER=http://localhost/adroit/events/all/category/PHP
+---
+2012/02/24 13:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/Ruby
+---
+2012/02/24 13:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/Ruby
+---
+2012/02/24 13:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/Ruby')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/Ruby
+---
+2012/02/24 13:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:08:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/Ruby')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/Ruby
+---
+2012/02/24 13:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/php
+---
+2012/02/24 13:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/php
+---
+2012/02/24 13:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/php
+---
+2012/02/24 13:09:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/php')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/php
+---
+2012/02/24 13:09:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/php
+---
+2012/02/24 13:09:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/php
+---
+2012/02/24 13:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/php')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/php
+---
+2012/02/24 13:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/php
+---
+2012/02/24 13:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/php
+---
+2012/02/24 13:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/
+---
+2012/02/24 13:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/
+---
+2012/02/24 13:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/
+---
+2012/02/24 13:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/
+---
+2012/02/24 13:12:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/g...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:12:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/images/y...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/Ruby
+HTTP_REFERER=http://localhost/adroit/events/all
+---
+2012/02/24 13:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/Ruby
+---
+2012/02/24 13:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/category/Ruby
+---
+2012/02/24 13:20:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:20:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/imag...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/events/all/Ruby
+---
+2012/02/24 13:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/goo...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 13:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/yah...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 13:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/yah...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/yahoo_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 13:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('images')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('images')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('site/images/goo...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/site/images/google_signin.png
+HTTP_REFERER=http://localhost/adroit/site/login
+---
+2012/02/24 13:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "type".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('type')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('type')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/type/all...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/type/all/category/php
+---
+2012/02/24 13:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all/cate...')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all/category/PHP
+---
+2012/02/24 13:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "all".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('all')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('all')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/all')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/all
+HTTP_REFERER=http://localhost/adroit/events/all/category/Ruby
+---
+2012/02/24 13:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "upcoming".' in /home/imam/public_html/adroit/framework/web/CController.php:484
+Stack trace:
+#0 /home/imam/public_html/adroit/framework/web/CController.php(271): CController->missingAction('upcoming')
+#1 /home/imam/public_html/adroit/framework/web/CWebApplication.php(276): CController->run('upcoming')
+#2 /home/imam/public_html/adroit/framework/web/CWebApplication.php(135): CWebApplication->runController('events/upcoming')
+#3 /home/imam/public_html/adroit/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/imam/public_html/adroit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adroit/events/upcoming
+HTTP_REFERER=http://localhost/adroit/events/all
+---
