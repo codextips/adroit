@@ -31,7 +31,7 @@ class EventsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'attending'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -40,6 +40,10 @@ class EventsController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+			),
+            array('allow', // allow authenticated user to perform attending actions
+				'actions'=>array('attending'),
+				'users'=>array('@'),
 			),
 		);
 	}
@@ -178,4 +182,26 @@ class EventsController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+    public function actionAttending() {
+        $this->layout = null;
+        if (isset($_POST['event_id'])) {
+            $model = Events::model()->findByPk($_POST['event_id']);
+            if ($model) {
+                $attendees = $model->attendees(array('condition' => 'attendees.user_id = ' . Yii::app()->user->id));
+                if (empty($attendees)) {
+                    $attendee = new Attendees;
+                    $attendee->attributes = array(
+                        'event_id' => $model->event_id,
+                        'user_id' => Yii::app()->user->id,
+                    );
+                    if ($attendee->save()) {
+                        $model->total_attending = (int) $model->total_attending + 1;
+                        $model->save(false);
+                        echo "<strong>You</strong> and <strong>" . ($model->total_attending - 1) . " other people</strong> attending so far!";
+                    }
+                }
+            }
+        }
+    }
 }

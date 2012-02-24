@@ -7,9 +7,3 @@
 	</div>
 <?php endif; ?>
 <h2>Upcoming Events</h2>
-<?php
-$this->widget('ext.bootstrap.widgets.BootListView', array(
-	'dataProvider' => $events,
-	'itemView' => '//events/_view',
-));
-?>

@@ -6,7 +6,7 @@
  * data can identity the user.
  */
 class UserIdentity extends CUserIdentity {
-
+    private $_id;
     /**
      * Authenticates a user.
      * The example implementation makes sure if the username and password
@@ -33,6 +33,7 @@ class UserIdentity extends CUserIdentity {
     public function authenticateOpenID($name = null) {
         $user = Users::model()->findByAttributes(array('email' => $this->username));
         if ($user) {
+            $this->_id = $user->user_id;
             $this->setState('name', $user->name);
             $this->setState('email', $user->email);
             $this->errorCode = self::ERROR_NONE;
@@ -44,6 +45,7 @@ class UserIdentity extends CUserIdentity {
                 'create_date' => @date('Y-m-d'),
             );
             if ($user->save()) {
+                $this->_id = $user->user_id;
                 $this->setState('name', $user->name);
                 $this->setState('email', $user->email);
                 $this->errorCode = self::ERROR_NONE;
@@ -52,6 +54,10 @@ class UserIdentity extends CUserIdentity {
             }
         }
         return $this->errorCode;
+    }
+
+    public function getId() {
+        return $this->_id;
     }
 
 }

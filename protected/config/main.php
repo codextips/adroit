@@ -48,6 +48,7 @@ return array(
 				'events/admin'=>'events/admin',
 				'events/view/<id:\d+>'=>'events/view',
 				'events/update/<id:\d+>'=>'events/update',
+                'events/attending'=>'events/attending',
 				'events/<type>'=>'events/index',
 				'events/<type>/category/<category>'=>'events/index',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

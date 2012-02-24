@@ -1,4 +1,4 @@
-<div class="view event">
+<div class="view event" id="<?php echo $data->event_id; ?>">
 	<div class="span2">
 		<?php if (!empty($data->logo)): ?>
 			<a href="#" class="thumbnail">
@@ -33,6 +33,27 @@
 		<p>
 			<?php echo CHtml::encode($data->summary); ?>
 		</p>
+        <p>
+            <a href="#">0 comments</a> &nbsp;
+            <span id="attendance-text">
+                <?php
+                if(isset (Yii::app()->user->id)){
+                    $attendees = $data->attendees(array('condition' => 'attendees.user_id = ' . Yii::app()->user->id));
+                    if(empty($attendees)){
+                ?>
+                    <strong><?php echo $data->total_attending; ?> people</strong> attending so far! &nbsp;
+                    <a id="i-am-attending" href="#" class="btn small">I'm attending</a>
+                <?php }else{?>
+                    <strong>You</strong> and <strong><?php echo (int)$data->total_attending > 0 ? ($data->total_attending - 1) : $data->total_attending; ?> other people</strong> attending so far!
+                <?php }
+                    
+                }else{
+                    echo "<strong>$data->total_attending people</strong> attending so far! &nbsp;";
+                    echo CHtml::link("Login to attend!", 'site/login', array('class' => 'btn small btn-primary'));
+                }
+                ?>
+            </span>
+        </p>
 	</div>
 
 	<?php /*
