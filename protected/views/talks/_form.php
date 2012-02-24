@@ -1,13 +1,14 @@
 <?php $form=$this->beginWidget('ext.bootstrap.widgets.BootActiveForm',array(
 	'id'=>'talks-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation' => true,
+        'enableClientValidation'=> true,
 )); ?>
 
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<?php echo $form->textFieldRow($model,'event_id',array('class'=>'span5')); ?>
+	 <?php echo CHtml::activeHiddenField($model, 'event_id'); ?>
 
 	<?php echo $form->textFieldRow($model,'title',array('class'=>'span5','maxlength'=>200)); ?>
 
@@ -17,14 +18,8 @@
 
 	<?php echo $form->textFieldRow($model,'slide_link',array('class'=>'span5','maxlength'=>200)); ?>
 
-	<?php echo $form->textFieldRow($model,'total_comments',array('class'=>'span5')); ?>
-
-	<?php echo $form->textFieldRow($model,'rating',array('class'=>'span5')); ?>
-
-	<?php echo $form->textFieldRow($model,'rate_count',array('class'=>'span5')); ?>
-
 	<div class="actions">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn primary')); ?>
+            <?php echo CHtml::ajaxSubmitButton($model->isNewRecord ? 'Post talk' : 'Save', array('talks/create'), array('success' => "function(){jQuery('#talk-list').yiiListView.update('talk-list');jQuery(':input','#talks-form').not(':button, :submit, :reset, :hidden') .val('').removeAttr('checked') .removeAttr('selected');}"), array('class' => 'btn small btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

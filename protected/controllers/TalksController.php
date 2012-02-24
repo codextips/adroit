@@ -60,7 +60,7 @@ class TalksController extends Controller {
         $model = new Talks;
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        $this->performAjaxValidation($model);
 
         if (isset($_POST['Talks'])) {
             $model->attributes = $_POST['Talks'];
@@ -82,7 +82,7 @@ class TalksController extends Controller {
         $model = $this->loadModel($id);
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        $this->performAjaxValidation($model);
 
         if (isset($_POST['Talks'])) {
             $model->attributes = $_POST['Talks'];
