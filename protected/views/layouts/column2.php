@@ -1,4 +1,9 @@
 <?php $this->beginContent('//layouts/main'); ?>
+<div class="span9">
+	<div id="content">
+		<?php echo $content; ?>
+	</div><!-- content -->
+</div>
 <div class="span3">
 	<div class="well" id="sidebar">
 	<?php
@@ -11,10 +16,5 @@
 	}
 	?>
 	</div><!-- sidebar -->
-</div>
-<div class="span9">
-	<div id="content">
-		<?php echo $content; ?>
-	</div><!-- content -->
 </div>
 <?php $this->endContent(); ?>

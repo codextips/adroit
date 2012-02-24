@@ -1,16 +1,15 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
-
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
-	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<?php $this->pageTitle = Yii::app()->name; ?>
+<?php if (Yii::app()->user->isGuest): ?>
+	<div class="alert alert-info message">
+		<h4>Welcome to Tech Adda!</h4>
+		<p>This is the site where event attendees can leave feedback on a tech event and its sessions. 
+			Do you have an opinion? Then <strong><?php echo CHtml::link('login', 'site/login'); ?></strong> and share it!</p>
+	</div>
+<?php endif; ?>
+<h2>Upcoming Events</h2>
+<?php
+$this->widget('ext.bootstrap.widgets.BootListView', array(
+	'dataProvider' => $events,
+	'itemView' => '//events/_view',
+));
+?>

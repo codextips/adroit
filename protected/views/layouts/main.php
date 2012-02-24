@@ -26,10 +26,10 @@
 					array('label'=>'Home', 'url'=> Yii::app()->baseUrl, 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'index')? true : false),
 					array('label'=>'Events', 'url'=>'#', 'active'=> ($this->uniqueid == 'event')? true : false, 'items'=>array(
 						array('label'=>'Browse Events', 'itemOptions'=>array('class'=>'nav-header')),
-						array('label'=>'All Events', 'url'=>  Yii::app()->createUrl('event/all')),
-						array('label'=>'Upcoming Events', 'url'=>Yii::app()->createUrl('event/upcoming')),
-						array('label'=>'Current Events', 'url'=>Yii::app()->createUrl('event/current')),
-						array('label'=>'Popular Events', 'url'=>Yii::app()->createUrl('event/popular')),
+						array('label'=>'All Events', 'url'=>  Yii::app()->createUrl('events/all')),
+						array('label'=>'Upcoming Events', 'url'=>Yii::app()->createUrl('events/upcoming')),
+						array('label'=>'Ongoing Events', 'url'=>Yii::app()->createUrl('events/ongoing')),
+						array('label'=>'Popular Events', 'url'=>Yii::app()->createUrl('events/popular')),
 					)),
 					array('label'=>'Contact', 'url'=>Yii::app()->createUrl('site/contact'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'contact')? true : false),
 					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/about'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'about')? true : false),
@@ -65,18 +65,20 @@
 		),
 	)); ?>
 	<div class="container">
-		<?php
-		if(isset($this->breadcrumbs))
-		{
-			$this->widget('bootstrap.widgets.BootCrumb', array(
-				'links'=>$this->breadcrumbs,
-				//'htmlOptions'=>array('class'=>'bredcrumbs'),
-			));
+		<div class="content">
+			<?php
+			if(isset($this->breadcrumbs))
+			{
+				$this->widget('bootstrap.widgets.BootCrumb', array(
+					'links'=>$this->breadcrumbs,
+					//'htmlOptions'=>array('class'=>'bredcrumbs'),
+				));
 
-		}
-		?>
-		<div class="row">
-			<?php echo $content; ?>
+			}
+			?>
+			<div class="row">
+				<?php echo $content; ?>
+			</div>
 		</div>
 	</div>
 </body>
