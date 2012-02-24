@@ -40,6 +40,11 @@
 		$this->widget('application.widgets.category.CategoryList');
 		?>
 		</div>
+		<div class="well">
+		<?php
+		$this->widget('application.widgets.event.EventSubmit');
+		?>
+		</div>
 	</div><!-- sidebar -->
 </div>
 <?php $this->endContent(); ?>

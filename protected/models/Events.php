@@ -77,6 +77,7 @@ class Events extends CActiveRecord {
 		// class name for the relations automatically generated below.
 		return array(
             'attendees' => array(self::MANY_MANY, 'Users' ,'attendees(event_id, user_id)'),
+			'categories' => array(self::MANY_MANY, 'Categories' ,'categories_events(event_id, category_id)'),
 		);
 	}
 

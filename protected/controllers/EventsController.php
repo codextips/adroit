@@ -136,7 +136,28 @@ class EventsController extends Controller
 		else if($type == 'popular') $dataSource = Events::model()->popular()->active();
 		else $dataSource = 'Events';
 		
-		$dataProvider=new CActiveDataProvider($dataSource);
+		$category = Categories::model()->findByAttributes(array('title'=>$category));
+		if(empty ($category))
+		{
+			$dataProvider=new CActiveDataProvider($dataSource);
+		}
+		else
+		{
+			$dataProvider=new CActiveDataProvider($dataSource, array(
+				'criteria'=>array(
+					'with'=>array(
+						'categories'=>array(
+							'condition'=>"events_categories.category_id = $category->category_id",
+							'together'=>true,
+							'alias'=>'events_categories',
+							'joinType'=>'INNER JOIN',
+						),
+						'attendees'
+					),
+				),
+			));
+		}
+		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
