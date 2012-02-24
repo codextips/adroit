@@ -44,3 +44,10 @@ div.meta {
 .align-justify {
     text-align: justify;
 }
+
+.comment {
+    clear: both;
+    border-top: 1px dotted #DDD;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}

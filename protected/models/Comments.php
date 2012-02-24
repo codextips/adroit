@@ -42,7 +42,8 @@ class Comments extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('event_id, talk_id, user_id, rating, is_private', 'numerical', 'integerOnly'=>true),
-			array('body, create_date', 'safe'),
+            array('body', 'required'),
+			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('comment_id, event_id, talk_id, user_id, body, rating, is_private, create_date', 'safe', 'on'=>'search'),
@@ -57,6 +58,7 @@ class Comments extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'commentor' => array(self::BELONGS_TO, 'Users', 'user_id'),
 		);
 	}
 
