@@ -100,6 +100,10 @@ class UsersController extends Controller
 			if($model->save())
 			{
 				Yii::app()->user->setFlash('success', '<strong>Successfully updated!</strong>');
+				if($model->user_id == Yii::app()->user->id && !empty ($model->name))
+				{
+					Yii::app()->user->name = $model->name;
+				}
 				$this->redirect(array('update','id'=>$model->user_id));
 			}
 		}
