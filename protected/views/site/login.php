@@ -9,41 +9,31 @@ $this->breadcrumbs=array(
 
 <p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('ext.bootstrap.widgets.BootActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
+    'type'=>'horizontal',
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
+	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <tt>demo/demo</tt> or <tt>admin/admin</tt>.
-		</p>
-	</div>
+	<?php echo $form->textFieldRow($model,'username',array('class'=>'span5')); ?>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'password',array('class'=>'span5')); ?>	
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+	<div class="actions">
+		<?php echo CHtml::submitButton('Login',array('class'=>'btn primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+
+<div class="alert alert-success">
+    <h4>You can also login using:</h4>
+    <?php echo CHtml::link(CHtml::image(Yii::app()->baseUrl . '/images/google_signin.png'), Yii::app()->createUrl('site/login?type=google'), array('calss' => 'thumbnail')); ?>
+    <?php echo CHtml::link(CHtml::image(Yii::app()->baseUrl . '/images/yahoo_signin.png'), Yii::app()->createUrl('site/login?type=yahoo'), array('calss' => 'thumbnail')); ?>
+</div>
