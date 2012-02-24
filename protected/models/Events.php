@@ -139,5 +139,13 @@ class Events extends CActiveRecord {
 		}
 		return parent::beforeSave();
 	}
+	
+	public function beforeValidate() {
+		if(strtotime($this->start_date) > strtotime($this->end_date))
+		{
+			$this->addError('end_date', 'End Date must be greater or equal to Start Date');
+		}
+		return parent::beforeValidate();
+	}
 
 }
