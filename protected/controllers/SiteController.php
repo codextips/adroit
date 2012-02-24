@@ -32,7 +32,7 @@ class SiteController extends Controller {
         $dataProvider = new CActiveDataProvider(
                         Events::model()->upcoming()->active()
         );
-        $events = Events::model()->findAll("start_date>= '" . date('Y-m-d') . "' AND is_active=1");
+        //$events = Events::model()->findAll("start_date>= '" . date('Y-m-d') . "' AND is_active=1");
         $this->render('//events/index', array('dataProvider' => $dataProvider));
     }
 
