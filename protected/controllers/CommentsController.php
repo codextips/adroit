@@ -65,8 +65,9 @@ class CommentsController extends Controller {
         
         if (isset($_POST['Comments'])) {
             $model->attributes = $_POST['Comments'];
-            $model->save();
-            echo $form->errorSummary($model);
+            if($model->save()){
+                // do some thing
+            }
         }
     }
 
