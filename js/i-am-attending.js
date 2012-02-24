@@ -5,7 +5,7 @@
 
 
 $('a#i-am-attending').click(function(){
-    parent_div = $(this).parents("div.view.event").eq(0);
+    parent_div = $(this).parents("div.view.event, div.single-event").eq(0);
     attending_button = $(this);
     attendance_text = parent_div.find('#attendance-text');
     $.ajax({

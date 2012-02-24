@@ -1,7 +1,7 @@
 body {
     padding-bottom: 60px;
     padding-top: 40px;
-	background-color: #EEEEEE;
+    background-color: #EEEEEE;
 }
 html{
     background-color: #EEEEEE;
@@ -14,12 +14,12 @@ html{
     padding: 20px;
 }
 .grid-view input, select{
-	width: 100%;
+    width: 100%;
 }
 
 .login-text a
 {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .event {
@@ -31,4 +31,16 @@ html{
 
 .pagination {
     float: right;
+}
+
+.single-event {
+    margin-bottom: 10px;
+}
+
+div.meta {
+    margin: 5px 0 10px;
+}
+
+.align-justify {
+    text-align: justify;
 }
