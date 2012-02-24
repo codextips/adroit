@@ -80,6 +80,9 @@
 				<?php echo $content; ?>
 			</div>
 		</div>
-	</div>
+		<div class="footer">
+			<p>&copy; <?php echo date('Y'); ?>, ADROIT @ BASIS Code Warrior's Challenge</p>
+		</div>
+	</div>	
 </body>
 </html>
