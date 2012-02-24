@@ -6,5 +6,8 @@ $this->breadcrumbs=array(
 ?>
 <h1>About</h1>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <tt><?php echo __FILE__; ?></tt>.</p>
+<p>Tech Adda is the platform for sharing technical ideas and viewpoints. 
+	The site gives details of events past, present and future, the sessions, and
+	speakers at each, and allows all attendees to register and leave feedback - 
+	for the sessions and for the event itself.
+</p>

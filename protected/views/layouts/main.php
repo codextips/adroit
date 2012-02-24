@@ -32,7 +32,7 @@
 						array('label'=>'Popular Events', 'url'=>Yii::app()->createUrl('events/popular')),
 					)),
 					array('label'=>'Contact', 'url'=>Yii::app()->createUrl('site/contact'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'contact')? true : false),
-					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/about'), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'about')? true : false),
+					array('label'=>'About', 'url'=>Yii::app()->createUrl('site/page',array('view'=>'about')), 'active'=> ($this->uniqueid == 'site' && $this->action->Id == 'about')? true : false),
 				),
 			),
 			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span3" placeholder="Search"></form>',
