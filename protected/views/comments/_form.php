@@ -17,7 +17,7 @@
 	<?php echo $form->textAreaRow($model,'body',array('rows'=>6, 'cols'=>50, 'class'=>'span8')); ?>
 
 	<div class="actions">
-        <?php echo CHtml::ajaxSubmitButton($model->isNewRecord ? 'Post' : 'Save', array('comments/create'), array('success' => "function(){jQuery('#comment-list').yiiListView.update('comment-list');jQuery('#Comments_body').val('')}"), array('class' => 'btn small btn-primary')); ?>
+        <?php echo CHtml::ajaxSubmitButton($model->isNewRecord ? 'Post comment' : 'Save', array('comments/create'), array('success' => "function(){jQuery('#comment-list').yiiListView.update('comment-list');jQuery('#Comments_body').val('')}"), array('class' => 'btn small btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

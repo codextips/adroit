@@ -7,7 +7,7 @@
     ));
     ?>
 </div>
-
+<br />
 <?php if(!Yii::app()->user->isGuest): ?>
 <div class="well" style="clear: both;">
     <h4>Post your comment</h4>

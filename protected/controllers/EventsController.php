@@ -56,6 +56,10 @@ class EventsController extends Controller
 	{
 		$model = $this->loadModel($id);
         $comment = new Comments;
+        $talk = new Talks;
+        $talk->attributes = array(
+            'event_id' => $model->event_id,
+        );
         $comment->attributes = array(
             'event_id' => $model->event_id,
             'user_id' => Yii::app()->user->id,
@@ -65,7 +69,7 @@ class EventsController extends Controller
                         'condition' => "event_id = $model->event_id",
                     ),
                     'pagination' => array(
-                        'pageSize' => 20,
+                        'pageSize' => 5,
                     ),
                 ));
         $commentsDataProvider = new CActiveDataProvider('Comments', array(
@@ -81,6 +85,7 @@ class EventsController extends Controller
         $this->render('view', array(
             'model' => $model,
             'comment' => $comment,
+            'talk' => $talk,
             'talksDataProvider' => $talksDataProvider,
             'commentsDataProvider' => $commentsDataProvider
         ));
