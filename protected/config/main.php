@@ -7,68 +7,71 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Tech Adda',
-    // preloading 'log' component
+	// preloading 'log' component
     'preload' => array(
-        'log',
-        'bootstrap',
-    ),
-    // autoloading model and component classes
+		'log',
+		'bootstrap',
+		),
+	// autoloading model and component classes
     'import' => array(
-        'application.models.*',
-        'application.components.*',
+		'application.models.*',
+		'application.components.*',
         'application.libs.*',
-    ),
+	),
     'modules' => array(
-        // uncomment the following to enable the Gii tool
-
+		// uncomment the following to enable the Gii tool
+		
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => 'adroit',
-            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
             'generatorPaths' => array(
-                'bootstrap.gii', // since 0.9.1
-            ),
-        ),
-    ),
-    // application components
+				'bootstrap.gii', // since 0.9.1
+			),
+		),
+	),
+	// application components
     'components' => array(
         'user' => array(
-            // enable cookie-based authentication
+			// enable cookie-based authentication
             'allowAutoLogin' => true,
-            'autoUpdateFlash' => false, 
-        ),
-        // uncomment the following to enable URLs in path-format
+            'autoUpdateFlash' => false,
+		),
+		// uncomment the following to enable URLs in path-format
 
-        'urlManager' => array(
-            'urlFormat' => 'path',
-            'showScriptName' => false,
-            'rules' => array(
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:events>/<action:admin>' => '<controller>/<action>',
-                '<controller:events>/<show:\w+>' => '<controller>/index',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-            ),
-        ),
+		'urlManager'=>array(
+			'urlFormat'=>'path',
+			'showScriptName'=> false,
+			'rules'=>array(
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'events/admin'=>'events/admin',
+				'events/view/<id:\d+>'=>'events/view',
+				'events/update/<id:\d+>'=>'events/update',
+				'events/<type>'=>'events/index',
+				'events/<type>/category/<category>'=>'events/index',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+			),
+		),
         'bootstrap' => array(
             'class' => 'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
             'coreCss' => true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
             'responsiveCss' => false, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
             'plugins' => array(
-                // Optionally you can configure the "global" plugins (button, popover, tooltip and transition)
-                // To prevent a plugin from being loaded set it to false as demonstrated below
+				// Optionally you can configure the "global" plugins (button, popover, tooltip and transition)
+				// To prevent a plugin from being loaded set it to false as demonstrated below
                 'transition' => false, // disable CSS transitions
                 'tooltip' => array(
                     'selector' => 'a.tooltip', // bind the plugin tooltip to anchor tags with the 'tooltip' class
                     'options' => array(
                         'placement' => 'bottom', // place the tooltips below instead
-                    ),
-                ),
-            // If you need help with configuring the plugins, please refer to Bootstrap's own documentation:
-            // http://twitter.github.com/bootstrap/javascript.html
-            ),
-        ),
+					),
+				),
+				// If you need help with configuring the plugins, please refer to Bootstrap's own documentation:
+				// http://twitter.github.com/bootstrap/javascript.html
+			),
+		),
         /*
           'db'=>array(
           'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
