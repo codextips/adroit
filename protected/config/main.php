@@ -44,7 +44,13 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=> false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                // REST patterns
+                array('api/list', 'pattern'=>'api/<model:\w+>', 'verb'=>'GET'),
+                array('api/view', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'GET'),
+                array('api/update', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'PUT'),  // Update
+                array('api/delete', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'DELETE'),
+                array('api/create', 'pattern'=>'api/<model:\w+>', 'verb'=>'POST'), // Create
+                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'events/admin'=>'events/admin',
 				'events/search'=>'events/search',
 				'events/create'=>'events/create',
