@@ -19,6 +19,7 @@
  */
 class Events extends CActiveRecord {
 
+	public $aliasIsActive = array('1'=> 'Yes', '0'=> 'No');
 	public function scopes() {
 		return array(
 			'active' => array(
@@ -59,6 +60,7 @@ class Events extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('title, summary, location, start_date, end_date, is_active', 'required',),
 			array('user_id, is_active, total_attending', 'numerical', 'integerOnly' => true),
 			array('title, logo, href', 'length', 'max' => 200),
 			array('location', 'length', 'max' => 100),
@@ -127,6 +129,15 @@ class Events extends CActiveRecord {
 		return new CActiveDataProvider($this, array(
 					'criteria' => $criteria,
 				));
+	}
+	
+	public function beforeSave() {
+		if($this->isNewRecord)
+		{
+			$this->create_date = date('Y-m-d');
+			$this->user_id = Yii::app()->user->id;
+		}
+		return parent::beforeSave();
 	}
 
 }

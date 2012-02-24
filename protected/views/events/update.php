@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Events <?php echo $model->event_id; ?></h1>
+<h1>Update Events</h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
