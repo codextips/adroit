@@ -44,7 +44,7 @@
 				'htmlOptions'=>array('class'=>'pull-right'),
 				'items'=>array(
 					array('label'=> (!Yii::app()->user->isGuest)? ((isset(Yii::app()->user->name))) ? Yii::app()->user->name : Yii::app()->user->email : '',
-						'url'=> Yii::app()->createUrl('user/update'), 'visible' => !Yii::app()->user->isGuest),
+						'url'=> Yii::app()->createUrl('users/update'), 'visible' => !Yii::app()->user->isGuest),
 					array('label'=> 'Logout',
 						'url'=> Yii::app()->createUrl('site/logout'), 'visible' => !Yii::app()->user->isGuest),
 					array('label'=> 'Login With:',

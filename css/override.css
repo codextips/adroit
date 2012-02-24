@@ -51,3 +51,6 @@ div.meta {
     margin-bottom: 15px;
     padding-top: 10px;
 }
+.thumbnails-mini {
+    margin: 0 0 8px 8px !important;
+}
