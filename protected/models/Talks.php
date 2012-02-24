@@ -43,7 +43,7 @@ class Talks extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-                        array('title, summary, speaker, slide_link', 'required'),
+            array('title, summary, speaker, slide_link', 'required'),
 			array('event_id, total_comments, rate_count', 'numerical', 'integerOnly'=>true),
 			array('rating', 'numerical'),
 			array('title, slide_link', 'length', 'max'=>200),
@@ -117,6 +117,6 @@ class Talks extends CActiveRecord
         $new_rating = round($new_rating, 1);
         $this->rating = $new_rating;
         $this->rate_count = $new_rate_count;
-        return $this->save();
+        return $this->save(false);
     }
 }
