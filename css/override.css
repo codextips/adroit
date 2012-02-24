@@ -54,3 +54,12 @@ div.meta {
 .thumbnails-mini {
     margin: 0 0 8px 8px !important;
 }
+
+
+
+.footer{
+	border-top: 1px solid #EEEEEE;
+    margin-top: 12px;
+    padding-top: 12px;
+	text-align: center;
+}
