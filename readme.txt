@@ -5,7 +5,7 @@ To Run the application first configure db settings in /protected/config/main.php
 
 Go to project directory root from command line.
 
-Migrate Database with "./protected/yiic migrate" command.
+Migrate Database with "php protected/yiic.php migrate" command.
 
 Go to project link from browser.
 
