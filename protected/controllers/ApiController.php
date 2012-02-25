@@ -415,11 +415,14 @@ class ApiController extends Controller {
      */
     private function _checkAuth() {
         // Check if we have the USERNAME and PASSWORD HTTP headers set?
-        if (!(isset($_SERVER["X_AUTH"]))) {
+	
+		$headers = apache_request_headers();
+		
+        if (!(isset($headers["X-AUTH"]))) {
             // Error: Unauthorized
             $this->_sendResponse(401);
         }
-        $api_key = $_SERVER['X_AUTH'];
+        $api_key = $headers['X-AUTH'];
         // Find the user
         $user = Users::model()->findByAttributes(array('api_key' => $api_key));
         if ($user === null) {

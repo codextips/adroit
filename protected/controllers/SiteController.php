@@ -156,5 +156,22 @@ class SiteController extends Controller {
         Yii::app()->user->setFlash('info', 'You are no longer logged in!');
         $this->redirect(Yii::app()->homeUrl);
     }
+	
+	public function actionApiCheck()
+	{
+		Yii::import('ext.EHttpClient.*');
+		
+		$client = new EHttpClient('http://localhost/adroit/api/events', array(
+			'maxredirects' => 3,
+			'timeout'      => 30,
+			'adapter'      => 'EHttpClientAdapterCurl'));
+
+		$client->setHeaders('X-AUTH', '10380b4c41b6d052ee39cece043e9d9a');
+		$response = $client->request();
+		if($response->isSuccessful())
+			echo $response->getBody();
+		else
+			$response->getRawBody();
+	}
 
 }
