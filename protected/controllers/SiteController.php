@@ -166,12 +166,23 @@ class SiteController extends Controller {
 			'timeout'      => 30,
 			'adapter'      => 'EHttpClientAdapterCurl'));
 
-		$client->setHeaders('X-AUTH', '10380b4c41b6d052ee39cece043e9d9a');
-		$response = $client->request();
+        $client->setParameterPost(array(
+                            'title' => 'Api Test',
+                            'summary' => 'Api Test',
+                            'logo' => 'Api Test',
+                            'location' => 'Api Test',
+                            'href' => 'Api Test',
+                            'start_date' => date('Y-m-d'),
+                            'end_date' => date('Y-m-d'),
+                            'is_active' => 1,
+                            'total_attending' => 0,
+                        ));
+		$client->setHeaders('X-AUTH', 'a3915b618112a31c8230ef342b760d4a');
+		$response = $client->request('POST');
 		if($response->isSuccessful())
 			echo $response->getBody();
 		else
-			$response->getRawBody();
+			echo $response->getBody();
 	}
 
 }

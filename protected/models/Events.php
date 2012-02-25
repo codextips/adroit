@@ -136,7 +136,8 @@ class Events extends CActiveRecord {
 		if($this->isNewRecord)
 		{
 			$this->create_date = date('Y-m-d');
-			$this->user_id = Yii::app()->user->id;
+            if(!Yii::app()->user->isGuest)
+                $this->user_id = Yii::app()->user->id;
 		}
 		return parent::beforeSave();
 	}

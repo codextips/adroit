@@ -12,7 +12,7 @@ class ApiController extends Controller {
     Const APPLICATION_ID = 'ASCCPE';
 
     private $format = 'json';
-    private $api_user;
+    public $api_user;
 
     // }}}
     // {{{ filters
@@ -35,7 +35,7 @@ class ApiController extends Controller {
     // {{{ actionList
 
     public function actionList() {
-        $this->_checkAuth();
+        //$this->_checkAuth();
         switch ($_GET['model']) {
             case 'events': // {{{
                 $models = Events::model()->findAll();
@@ -113,20 +113,18 @@ class ApiController extends Controller {
      */
     public function actionCreate() {
         $this->_checkAuth();
-
         switch ($_GET['model']) {
             // Get an instance of the respective model
             case 'events': // {{{
                 $model = new Events;
+                $_POST['user_id'] = (int)$this->api_user->user_id;
                 break; // }}}
             case 'talks': // {{{
                 $model = new Talks;
                 break; // }}}
-            case 'users': // {{{
-                $model = new Users;
-                break; // }}}
             case 'comments': // {{{
                 $model = new Comments;
+                $_POST['user_id'] = (int)$this->api_user->user_id;
                 break; // }}}
             default: // {{{
                 $this->_sendResponse(501, sprintf('Mode <b>create</b> is not implemented for model <b>%s</b>', $_GET['model']));
