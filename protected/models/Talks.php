@@ -64,6 +64,7 @@ class Talks extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'event' => array(self::BELONGS_TO, 'Events', 'event_id'),
+            'comments_count' => array(self::STAT,'Comments','comments(talk_id, comment_id)'),
 		);
 	}
 

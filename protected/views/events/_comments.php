@@ -1,4 +1,4 @@
-<div class="comments">
+<div id="comments" class="comments">
     <?php
     $this->widget('ext.bootstrap.widgets.BootListView', array(
         'id' => 'comment-list',

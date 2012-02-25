@@ -80,6 +80,7 @@ class Events extends CActiveRecord {
 		return array(
             'attendees' => array(self::MANY_MANY, 'Users' ,'attendees(event_id, user_id)'),
 			'categories' => array(self::MANY_MANY, 'Categories' ,'categories_events(event_id, category_id)'),
+            'comments_count' => array(self::STAT,'Comments','comments(event_id, comment_id)'),
 		);
 	}
 

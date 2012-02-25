@@ -34,7 +34,7 @@
 			<?php echo CHtml::encode($data->summary); ?>
 		</p>
         <p>
-            <a href="#"><i class="icon-comment"></i>&nbsp;<?php echo 0; ?> comments</a> &nbsp;
+            <a href="<?php echo Yii::app()->createUrl('events/view', array('id' => $data->event_id)); ?>"><i class="icon-comment"></i>&nbsp;<?php echo $data->comments_count; ?> comments</a> &nbsp;
             <span id="attendance-text">
                 <?php
                 if(isset (Yii::app()->user->id)){
