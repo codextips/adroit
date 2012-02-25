@@ -60,7 +60,7 @@ class Events extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, summary, location, start_date, end_date, is_active', 'required',),
+			array('title, summary, start_date, end_date', 'required',),
 			array('user_id, is_active, total_attending', 'numerical', 'integerOnly' => true),
 			array('title, logo, href', 'length', 'max' => 200),
 			array('location', 'length', 'max' => 100),
@@ -173,7 +173,6 @@ class Events extends CActiveRecord {
 				'title'=> $this->title,
 				'start_date'=> $this->start_date,
 				'end_date'=> $this->end_date,
-				'location'=> $this->location,
 			));
 		
 		if(!empty ($existingEvent))

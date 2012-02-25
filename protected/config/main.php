@@ -45,6 +45,7 @@ return array(
 			'showScriptName'=> false,
 			'rules'=>array(
                 // REST patterns
+                array('bdEventsApi/consume', 'pattern'=>'bdeventsapi/consume/<model:\w+>', 'verb'=>'GET'),
                 array('api/list', 'pattern'=>'api/<model:\w+>', 'verb'=>'GET'),
                 array('api/view', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'GET'),
                 array('api/update', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'PUT'),  // Update
