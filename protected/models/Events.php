@@ -145,7 +145,41 @@ class Events extends CActiveRecord {
 		{
 			$this->addError('end_date', 'End Date must be greater or equal to Start Date');
 		}
+		//Check possible duplicated event
+		if($this->isNewRecord)
+		{
+			$existingEvent = Events::model()->findByAttributes(array(
+				'title'=> $this->title,
+				'start_date'=> $this->start_date,
+				'end_date'=> $this->end_date,
+				'location'=> $this->location,
+			));
+			
+			$existID = $this->duplicateExist();
+			if($existID)
+			{
+				$this->addError('event_id', 'Possibly duplicate events of '. 
+						CHtml::link(Yii::app()->createAbsoluteUrl('events/view',array('id'=>$existID)),
+								Yii::app()->createUrl('events/view',array('id'=>$existID))));
+			}
+		}
 		return parent::beforeValidate();
 	}
-
+	
+	public function duplicateExist()
+	{
+		$existingEvent = Events::model()->findByAttributes(array(
+				'title'=> $this->title,
+				'start_date'=> $this->start_date,
+				'end_date'=> $this->end_date,
+				'location'=> $this->location,
+			));
+		
+		if(!empty ($existingEvent))
+		{
+			return $existingEvent->event_id;
+		}
+		return 0;
+		
+	}
 }
