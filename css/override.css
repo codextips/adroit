@@ -2,6 +2,8 @@ body {
     padding-bottom: 60px;
     padding-top: 40px;
     background-color: #EEEEEE;
+	background-image: url("../images/grid-18px-masked.png");
+	background-repeat: repeat;
 }
 html{
     background-color: #EEEEEE;
