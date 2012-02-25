@@ -125,5 +125,6 @@ return array(
         'host' => 'localhost',
         'openid.google' => 'https://www.google.com/accounts/o8/id',
         'openid.yahoo' => 'https://me.yahoo.com',
+		'bd_events_api' =>"http://192.168.1.4/api/",
     ),
 );
