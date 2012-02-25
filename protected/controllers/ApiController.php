@@ -12,6 +12,7 @@ class ApiController extends Controller {
     Const APPLICATION_ID = 'ASCCPE';
 
     private $format = 'json';
+    private $api_user;
 
     // }}}
     // {{{ filters
@@ -34,7 +35,7 @@ class ApiController extends Controller {
     // {{{ actionList
 
     public function actionList() {
-        //$this->_checkAuth();
+        $this->_checkAuth();
         switch ($_GET['model']) {
             case 'events': // {{{
                 $models = Events::model()->findAll();
@@ -111,7 +112,7 @@ class ApiController extends Controller {
      * @return void
      */
     public function actionCreate() {
-        //$this->_checkAuth();
+        $this->_checkAuth();
 
         switch ($_GET['model']) {
             // Get an instance of the respective model
@@ -414,20 +415,18 @@ class ApiController extends Controller {
      */
     private function _checkAuth() {
         // Check if we have the USERNAME and PASSWORD HTTP headers set?
-        if (!(isset($_SERVER['HTTP_X_' . self::APPLICATION_ID . '_USERNAME']) and isset($_SERVER['HTTP_X_' . self::APPLICATION_ID . '_PASSWORD']))) {
+        if (!(isset($_SERVER["X_AUTH"]))) {
             // Error: Unauthorized
             $this->_sendResponse(401);
         }
-        $username = $_SERVER['HTTP_X_' . self::APPLICATION_ID . '_USERNAME'];
-        $password = $_SERVER['HTTP_X_' . self::APPLICATION_ID . '_PASSWORD'];
+        $api_key = $_SERVER['X_AUTH'];
         // Find the user
-        $user = User::model()->find('LOWER(username)=?', array(strtolower($username)));
+        $user = Users::model()->findByAttributes(array('api_key' => $api_key));
         if ($user === null) {
             // Error: Unauthorized
-            $this->_sendResponse(401, 'Error: User Name is invalid');
-        } else if (!$user->validatePassword($password)) {
-            // Error: Unauthorized
-            $this->_sendResponse(401, 'Error: User Password is invalid');
+            $this->_sendResponse(401, 'Error: Invalid API KEY');
+        } else{
+            $this->api_user = $user;
         }
     }
 

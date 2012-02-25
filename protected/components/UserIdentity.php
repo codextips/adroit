@@ -43,6 +43,7 @@ class UserIdentity extends CUserIdentity {
                 'email' => $this->username,
                 'name' => $name,
                 'create_date' => @date('Y-m-d'),
+                'api_key' => md5('phpfour@gmail.com' . time()),
             );
             if ($user->save()) {
                 $this->_id = $user->user_id;
